@@ -21,9 +21,9 @@ if ($host.nil? || $shop.nil? || $token.nil?)
 end
 
 
-$numberOfCartsToCreate = ENV['EP_CART_TO_CREATE'] || 10
-$maxNumberOfDifferentLineItems = ENV['EP_MAX_LINEITEMS_PER_CART'] || 3
-$maxNumberOfProductsPerLineItem = ENV['EP_MAX_PRODUCTS_PER_LINEITEM'] || 5
+$numberOfCartsToCreate = (ENV['EP_CART_TO_CREATE'] || 10).to_i
+$maxNumberOfDifferentLineItems = (ENV['EP_MAX_LINEITEMS_PER_CART'] || 3).to_i
+$maxNumberOfProductsPerLineItem = (ENV['EP_MAX_PRODUCTS_PER_LINEITEM'] || 5).to_i
 
 
 
