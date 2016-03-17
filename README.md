@@ -17,8 +17,8 @@ Name | Description | Required? | Default
 EP_HOST | url of the machine where the shop runs | yes |
 EP_SHOP | name of the shop where the orders should be created | yes |
 EP_TOKEN | token for the REST API (required) | yes |
-EP_CART_TO_CREATE | number of orders to create | no | 10
-EP_MAX_LINEITEMS_PER_CART | max. number of line items per order | no | 3
+EP_ORDERS_TO_CREATE | number of orders to create | no | 10
+EP_MAX_LINEITEMS_PER_ORDER | max. number of line items per order | no | 3
 EP_MAX_PRODUCTS_PER_LINEITEM | max. number of products per line item | no | 5
 ORDERSFILE | file to store the GUIDs of the created orders | no |
 
