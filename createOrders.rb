@@ -133,6 +133,8 @@ end
 
 def createOrderFromCart(cartId)
 
+    puts 'create order from cart '+cartId
+
     uri = URI.parse($host)
     http = Net::HTTP.new(uri.host, uri.port)
 
@@ -143,7 +145,12 @@ def createOrderFromCart(cartId)
 
     response = http.request(request)
 
-    puts 'created order from cart '+cartId+': '+response.code
+    orderJson = response.body
+    order = JSON.parse(orderJson)
+    orderId = order['orderId']
+    puts 'created order '+orderId+': '+response.code
+
+    return orderId
 end
 
 
@@ -179,6 +186,7 @@ end
 
 
 # create orders
+orderIds = []
 $numberOfCartsToCreate.times do |i|
 
     puts "\n"
@@ -189,6 +197,11 @@ $numberOfCartsToCreate.times do |i|
 
     addRandomBillingAddressToCart(cartId)
 
-    createOrderFromCart(cartId)
+    orderId = createOrderFromCart(cartId)
+    orderIds.push(orderId)
 
 end
+
+puts "\n"
+puts 'created orders:'
+puts orderIds
