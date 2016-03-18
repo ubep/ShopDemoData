@@ -8,7 +8,11 @@ This script can only be run on the machine where the shop is installed.
 
 ## Creating orders using *createOrders.rb*
 
-The script reads a few environment variables which have to be set first.
+The script uses the *faker* gem which can be easily installed:
+
+    gem install faker
+
+After starting, a few environment variables are read which have to be set first.
 
 These are all available variables which can or have to be set:
 
