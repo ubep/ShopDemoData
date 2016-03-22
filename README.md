@@ -34,7 +34,8 @@ If you want to run the script from a shell script, it could look like this:
     export EP_TOKEN=CXudJp5oXJbrYnz8QJk2cNGgW0sZscFa
     ruby createOrders.rb
 
-
+(It is recommended to turn off the e-mail event *Order receipt confirmation*, 
+otherwise the shop will send e-mails to the fake email addresses)
 
 ## Changing the order dates using *setRandomOrderCreationDates.pl*
 
